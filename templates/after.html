@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+    <style media="screen">
+      h1 {
+        text-align: center;
+      }
+
+      div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+
+      img {
+        max-width:700px;
+        max-height:700px;
+        width:auto;
+        height:auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Processed Image</h1>
+    <div>
+      <img src="{{ data_uri }}" alt="Processed Image">
+    </div>
+  </body>
+</html>

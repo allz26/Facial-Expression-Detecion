@@ -1,0 +1,63 @@
+<!-- <html>
+
+<body>
+    
+<form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+    <input type="file" name='file1'>
+<input type="submit" name="btn"> 
+</form>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Crowd Detection</title>
+    <style media="screen">
+      h1 {
+        text-align: center;
+      }
+
+      div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+
+      img {
+        max-width:700px;
+        max-height:700px;
+        width:auto;
+        height:auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Emotion Detection</h1>
+    <div>
+      <form id="dataku" action="/after" method="post" enctype="multipart/form-data">
+        <img id="uploadpreview">
+        <br>
+        <input id="uploadgambar" type="file" name="file" onchange="TampilGambar();" accept="image/*">
+      </form>
+    </div>
+    <div>
+      <button type="submit" form="dataku">Submit</button>
+    </div>
+
+    <script type="text/javascript">
+      function TampilGambar(){
+        var gambar = new FileReader();
+        gambar.readAsDataURL(document.getElementById('uploadgambar').files[0]);
+        gambar.onload = function (data) {
+          document.getElementById('uploadpreview').src = data.target.result;
+        };
+      };
+    </script>
+  </body>
+</html
